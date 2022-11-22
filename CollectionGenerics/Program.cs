@@ -47,7 +47,7 @@ namespace CollectionGenerics
                 Console.WriteLine("e2 finns inte i stacken");
             }
             Console.WriteLine("******************************");
-            // Kikar och kollar vilken anställd som ligger högst upp i stacken stackEmp 
+            // peek på stacken stackEmp 
             stackEmp.Push(e1);
             stackEmp.Push(e2);
             stackEmp.Push(e3);
@@ -55,7 +55,27 @@ namespace CollectionGenerics
             stackEmp.Push(e5);
 
             Employee peek = stackEmp.Peek();
+
+            Console.WriteLine("Items in the stack = " + stackEmp.Count);
+
             Console.WriteLine($"ID: {peek.ID}, Name: {peek.Name}, Gender: {peek.Gender}, Salary: {peek.Salary}");
+            stackEmp.Pop();
+
+            Console.WriteLine("Items in the stack = " + stackEmp.Count);
+
+            Console.WriteLine($"ID: {peek.ID}, Name: {peek.Name}, Gender: {peek.Gender}, Salary: {peek.Salary}");
+            stackEmp.Pop();
+
+            Console.WriteLine("Items in the stack = " + stackEmp.Count);
+
+            if (stackEmp.Contains(e3))
+            {
+                Console.WriteLine("e3 finns i stacken");
+            }
+            else 
+            {
+                Console.WriteLine("e3 finns inte i stacken");
+            }
 
             Console.WriteLine("******************************");
 
